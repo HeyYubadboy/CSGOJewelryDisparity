@@ -3,7 +3,7 @@
 
 #由YBB(Yubadboy)编写，其所有权归属Yubadboy，Yubadboy有权对代码做修改
 
-import selenium.common.exceptions
+import selenium.common.exceptions,json
 from selenium import webdriver
 import selenium.webdriver.support.ui as ui
 from decimal import Decimal
@@ -15,14 +15,18 @@ budget=float(input("Budget:"))
 buffGetUrl="https://buff.163.com/market/csgo#tab=selling&max_price={}&page_num={}"
 igxwSearchUrl="https://www.igxe.cn/market/csgo?keyword={}"
 
+#读取配置文件
+with open("config.json","r") as configFile:
+    config=json.load(configFile)
+
 #这项是MicrosoftWebDriver（Edge驱动）的路径
-executable_path=r""
+executable_path=config["executable_path"]
 
 #这两项是网易buff的cookie，可在登录时查看network找到
 buffCookie1 = {"name": "session",
-               "value": ""}
+               "value": config["cookies"]["session"]}
 buffCookie2 = {"name": "csrf_token",
-               "value": ""}
+               "value": config["cookies"]["csrf_token"]}
 
 count=1
 
