@@ -11,12 +11,18 @@ from decimal import Decimal
 #获取预算和开始网站
 budget=float(input("Budget:"))
 
+#这两项千万不要动
 buffGetUrl="https://buff.163.com/market/csgo#tab=selling&max_price={}&page_num={}"
 igxwSearchUrl="https://www.igxe.cn/market/csgo?keyword={}"
-executable_path=r"E:\desktop\getstudio\meonly\CSGOJewelryDisparity\MicrosoftWebDriver.exe"
-buffCookie1 = {"name": "session", "value": "1-CHPxUMorO2JbdtLvibfRwk_Zpf283zSVegR0R6KyhWgG2037919380"}
+
+#这项是MicrosoftWebDriver（Edge驱动）的路径
+executable_path=r""
+
+#这两项是网易buff的cookie，可在登录时查看network找到
+buffCookie1 = {"name": "session",
+               "value": ""}
 buffCookie2 = {"name": "csrf_token",
-               "value": "IjhlZjhlMDgzY2M0MGMyZDExNTQ5ZGM2MTcwYTBhNDhkMGU4MDY1ZWUi.FXOVaA.IkH1nNGZZH6k6XuM5GQIofwcbf4"}
+               "value": ""}
 
 count=1
 
