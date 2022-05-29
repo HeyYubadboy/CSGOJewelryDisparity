@@ -1,5 +1,7 @@
 # oding = utf-8
 # -*- coding:utf-8 -*-
+#由YBB(Yubadboy)编写，其所有权归属Yubadboy
+
 import selenium.common.exceptions
 from selenium import webdriver
 import selenium.webdriver.support.ui as ui
