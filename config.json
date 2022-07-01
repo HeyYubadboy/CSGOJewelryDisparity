@@ -4,5 +4,11 @@
   {
     "session": "",
     "csrf_token": ""
-  }
+  },
+  "way": "num",
+  "pageNum": 1,
+  "jewelryNum": 10,
+  "minDisparity": 1.5,
+  "minStockA": 200,
+  "minStockB": 200
 }
